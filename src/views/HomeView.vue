@@ -1,6 +1,6 @@
 <template>
   <section class="h-full">
-    <div class=" bg-gray-200 w-full grid place-items-center">
+    <div class="h-screen bg-gray-200 w-full grid place-items-center">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center z-10 relative">
         <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
           Olá, me chamo Thalys
