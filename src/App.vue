@@ -13,33 +13,35 @@
       <ul role="list" class="w-full max-w-md mx-auto divide-y divide-gray-200 dark:divide-gray-700">
         <li class="py-3 sm:py-4">
           <a :href="`https://discordapp.com/users/${discord_user.id}`" target="_blank">
-            <div class="flex items-center space-x-3 px-3.5 py-2.5 bg-gray-900 rounded-full">
-              <div class="flex-shrink-0">
-                  <img class="w-8 h-8 rounded-full" :src="discord_user.id == -1 ? 
-                  'assets/discord.png' :
-                  `https://cdn.discordapp.com/avatars/${discord_user.id}/${discord_user.avatar}.png`">
-              </div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
-                  {{ discord_user.username }}
-                </p>
-              </div>
-              <span :class="{
-                  'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300': discord_status === 'idle',
-                  'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300': discord_status === 'online',
-                  'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300': discord_status === 'dnd' || discord_status === 'offline'
-                }"
-                class="inline-flex items-center text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
-                <span
-                  class="w-2 h-2 mr-1 rounded-full"
-                  :class="{
-                    'bg-yellow-500': discord_status === 'idle',
-                    'bg-green-500': discord_status === 'online',
-                    'bg-red-500': discord_status === 'dnd' || discord_status === 'offline'
+            <div class="px-3.5 py-2.5 bg-gray-900 rounded-full">
+              <div class="relative flex items-center">
+                <div class="flex-shrink-0 transition duration-700 ease-in-out">
+                    <img class="w-8 h-8 rounded-full" :src="discord_user.id == -1 ? 
+                      'assets/discord.png' : `https://cdn.discordapp.com/avatars/${discord_user.id}/${discord_user.avatar}.png`">
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm font-semibold text-gray-900 truncate dark:text-white">
+                    {{ discord_user.username }}
+                  </p>
+                </div>
+                <span :class="{
+                    'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300': discord_status === 'idle',
+                    'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300': discord_status === 'online',
+                    'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300': discord_status === 'dnd' || discord_status === 'offline',
+                    'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300': discord_status === '...'
                   }"
-                ></span>
-                {{ discord_status }}
-              </span>
+                  class="absolute right-0 transition duration-700 ease-in-out inline-flex items-center text-xs font-medium w-25 mr-2 px-2.5 py-0.5 rounded-full">
+                  <span
+                    class="w-2 h-2 mr-1 rounded-full"
+                    :class="{
+                      'bg-yellow-500': discord_status === 'idle',
+                      'bg-green-500': discord_status === 'online',
+                      'bg-red-500': discord_status === 'dnd' || discord_status === 'offline',
+                    }"
+                  ></span>
+                  {{ discord_status }}
+                </span>
+              </div>
             </div>
           </a>
         </li>
