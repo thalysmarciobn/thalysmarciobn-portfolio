@@ -10,7 +10,7 @@
             <transition-group name="fade" mode="out-in">
               <div v-for="item in items" :key="item.id" class="group relative overflow-hidden rounded-xl">
                 <div class="absolute inset-0 h-full w-full group-hover:bg-gray-400/20"></div>
-                <img :src="item.image" class="h-auto w-full" />
+                <img :src="item.image" class="h-full w-full" />
               </div>
             </transition-group>
           </div>
