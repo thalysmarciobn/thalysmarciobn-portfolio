@@ -1,24 +1,5 @@
-# thalysmarciobn-portfolio
+## 🛠️ Construído com
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* [Vue.js](https://vuejs.org) - Framework para construção de interfaces de usuário da web.
+* [lanyard](https://github.com/Phineas/lanyard) - Expor presença e atividades no Discord a uma API RESTful e WebSocket
+* [vercel](https://vercel.com/dashboard) -  Plataforma de hospedagem e implantação para aplicativos web e projetos
